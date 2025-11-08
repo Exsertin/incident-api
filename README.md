@@ -9,11 +9,16 @@
 ```bash
 git clone https://github.com/Exsertin/incident-api.git
 cd incident-api
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
+docker-compose build
+docker-compose up -d
+docker-compose exec web python manage.py makemigrations
+docker-compose exec web python manage.py migrate
+```
+
+## 🚀 Для запуска тестов
+
+```bash
+docker-compose exec web python manage.py test
 ```
 
 ## Эндпоинты
