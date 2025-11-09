@@ -47,7 +47,7 @@ Response
 
 2. Получить список (с фильтром по статусу)
 
-**GET /api/incidents/?status=open**
+**GET /api/incidents?status=open**
 
 Response
 ```json
@@ -62,7 +62,7 @@ Response
 ```
 3. Обновить статус
 
-**PATCH /api/incidents/1/status/**
+**PATCH /api/incidents/1/status**
 
 ```json
 {
