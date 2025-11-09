@@ -22,7 +22,7 @@ class IncidentAPITests(TestCase):
 
     def setUp(self):
         self.client = APIClient()
-        self.base_url = "/api/incidents/"
+        self.base_url = "/api/incidents"
 
     def test_create_incident(self):
         # given
